@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Item from './Item';
 
-const NOTE_ENDPOINT = 'https://note.mu/api/v1/notes?urlname=kenjin';
+const Qiita_ENDPOINT = 'https://qiita.com/api/v2/users/village_21/items';
 
-class NoteIndex extends Component {
+class QiitaIndex extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -14,11 +14,15 @@ class NoteIndex extends Component {
 
     componentDidMount() {
       axios
-        .get(NOTE_ENDPOINT)
+        .get(Qiita_ENDPOINT, { params: {
+            "per_page": "10",
+            "token": "cbfd387e16dce4f909cf605262f32ce1e06966cf"
+          }}
+        )
         .then((results) => {
-            const result = results.data.data;
+            const result = results.data;
             this.setState({
-              posts: result.notes,
+              posts: result,
             });
           },
         )
@@ -40,4 +44,4 @@ class NoteIndex extends Component {
     }
 }
 
-export default NoteIndex;
+export default QiitaIndex;
