@@ -4,6 +4,7 @@ import "./App.css";
 import MemoIndex from './memo/Index';
 import NoteIndex from './note/Index';
 import QiitaIndex from './qiita/Index';
+import WordpressIndex from './wordpress/Index';
 
 class App extends Component {
   td = {
@@ -21,6 +22,8 @@ class App extends Component {
         <NoteIndex />
         <h1>Qiita</h1>
         <QiitaIndex />
+        <h1>Wordpress</h1>
+        <WordpressIndex />
         <h1>Memo</h1>
         <MemoIndex />
       </div>
