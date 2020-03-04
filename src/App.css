@@ -2,19 +2,8 @@ body {
   margin: 10px;
 }
 
-h1 {
-  font-size: 72pt;
-  font-weight: bold;
-  text-align: right;
-  letter-spacing: -8px;
-  color: #f0f0f0;
-  margin: -40px, 0px;
-}
-
-p {
-  margin: 0px;
-  color: #666;
-  font-size: 16pt;
+a:hover{
+  color : #ff7043;
 }
 
 .App {
@@ -24,6 +13,22 @@ p {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+@media screen and (max-width: 640px) {
+  .last td:last-child {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+  .tbl-r02 {
+    width: 80%;
+  }
+  .tbl-r02 th,
+  .tbl-r02 td {
+　　border-bottom: none;
+    display: block;
+    width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
